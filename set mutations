@@ -1,0 +1,16 @@
+
+nA = int(input())
+A = set(map(int, input().split()))
+n = int(input())
+for i in range(n):
+    cmd,t= input().split()
+    Set = set(map(int, input().split()))
+    if cmd == "update":
+        A |= Set
+    if cmd == "intersection_update":
+        A &= Set
+    if cmd == "difference_update":
+        A -= Set
+    if cmd == "symmetric_difference_update":
+        A ^= Set
+print(sum(A))
